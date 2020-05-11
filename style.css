@@ -17,27 +17,252 @@ body {
     line-height: 1.6;
 }
 
-
-/* HLAVICKA */
-
 .titulek {
-    font-family: 'Raleway', serif;
+    font-family: "Raleway", serif;
+    font-size: 70px;
+    margin: 15px;
+    padding: 10px;
+}
+
+header {
+    background-image: url(images/island-hlavicka.jpg);
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hlavicka-text {
+    text-align: center;
+    color: white;
+}
+
+.perex {
+    margin: 0px;
+    padding: 0px 40px 40px;
+}
+  
+.autor {
+    font-style: italic;
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+
+.autor::before {
+    position: absolute;
+    content: "";
+    left: 46%;
+    top: 0;
+    width: 8%;
+    border: 1.5px solid white;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #cecdcd;
+}
+
+.menu a {
+    text-decoration: none;
+    color: grey;
+}
+
+.menu a:hover {
+    color: rgb(83, 83, 83);
+}
+
+h2 {
+    padding: 0px 30px 30px 30px;
+    font-family: sans-serif;
+    position: relative;
+}
+  
+h2::after {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    margin: 0px 0px 10px 0px;
+    left: 0;
+    width: 10%;
+    border: 2px solid #65a3e2;
+}
+  
+p {
+    padding: 0px 30px;
+}
+  
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.popisek,
+.popisek a {
+    color: #919090;
+    font-size: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0px;
+    padding: 5px 0px 25px 0px;
+}
+
+.popisek-copy {
+    font-weight: normal;
+}
+
+footer {
+    background-color: #bdbcbc;
+    color: #858585;
+    font-size: 10px;
+    padding: 20px;
+    text-align: center;
+}
+  
+footer a {
+    color: #757575;
 }
 
 
-/* MENU */
+@media (min-width: 500px) {
+    .menu {
+        font-size: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
 
+    .menu li {
+        padding: 10px;
+        flex: 1 1 25%;
+        border: 1px solid #cecdcd;
+        border-left: none;
+    }
+    
+    .menu li:last-child {
+        border-right: none;
+    }
 
+    .popisek {
+        text-align: right;
+        color: white;
+        transform: translate(-15px, -25px);
+    }
 
+    .popisek a {
+        color: white;
+    }
 
-/* OBSAH */
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    .foto {
+        flex: 0 0 50%;
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+    }
 
+    .foto img {
+        display: block;
+        max-width: 100%;
+    }
 
+    .foto .popisek {
+        position: absolute;
+        display: none;
+        width: 100%;
+        bottom: 0;
+        padding: 5px;
+        margin: 0;
+        color: #e6e6e6;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
 
-/* FOTOGALERIE */
+    .foto:hover .popisek {
+        display: block;
+        transform: scale(1.5);
+        bottom: 7px;
+    }
+}
 
+@media (min-width: 1000px) {
+    header {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
+    .hlavicka-text {
+        max-width: 80%;
+        padding: 15px;
+    }
 
+    .hlavni {
+        width: 90%;
+        background-color: white;
+        position: relative;
+        margin: -50px auto;
+    }
 
-/* PATICKA */
+    .menu {
+        display: block;
+        padding: 30px 0px 0px 20px;
+        margin: 10px;
+    }
+
+    .menu li {
+        border: 0;
+        border-bottom: 1px solid #cecdcd;
+        text-align: left;
+    }
+
+    .cast1 {
+        display: inline-flex;
+    }
+
+    .uvodni-text {
+        padding: 20px;
+        flex: 1 1 75%;
+        margin-top: -220px;
+        margin-left: 220px;
+    }
+    
+    .proc {
+        padding-right: 180px;
+    }
+
+    .co-musite-videt,
+    .co-videt2 {
+        padding-left: 180px;
+    }
+
+    .foto {
+        flex: 0 0 calc(100%/3);
+    } 
+ 
+    footer {
+        text-align: left;
+    }
+}
+   
+   
